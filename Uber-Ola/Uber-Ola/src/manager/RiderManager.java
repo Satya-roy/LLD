@@ -17,7 +17,7 @@ public class RiderManager {
         this.ridersMap = new HashMap<>();
     };
 
-    public RiderManager getRiderManagerInstance() {
+    public static RiderManager getRiderManagerInstance() {
         if(riderManagerInstance == null) { // to avoid threads to take synchronised block after 1st initialisation
             synchronized (RiderManager.class) {
                 if(riderManagerInstance == null) { // create instance only once

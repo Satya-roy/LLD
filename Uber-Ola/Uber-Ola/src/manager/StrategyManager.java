@@ -14,7 +14,7 @@ public class StrategyManager {
     private static volatile StrategyManager strategyManagerInstance;
     private StrategyManager() {}
 
-    public StrategyManager getStrategyManagerInstance() {
+    public static StrategyManager getStrategyManagerInstance() {
         if(strategyManagerInstance == null) {
             synchronized (StrategyManager.class) {
                 if(strategyManagerInstance == null) {

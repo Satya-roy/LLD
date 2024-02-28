@@ -8,8 +8,7 @@ public class TripMetaData {
 
     public TripMetaData(String srcLocation,
                         String dstLocation,
-                        int riderRating,
-                        int driverRating) {
+                        int riderRating) {
         this.srcLocation = srcLocation;
         this.dstLocation = dstLocation;
         this.riderRating = riderRating;
