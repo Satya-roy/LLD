@@ -8,10 +8,10 @@ import java.util.Map;
 /**
  * Driver manager is singleton class, using enum.
  */
-public enum DiverManager {
+public enum DriverManager {
     DRIVER_MANAGER_INSTANCE;
     private Map<String, Driver>  driversMap;
-    private DiverManager() {
+    DriverManager() {
         driversMap = new HashMap<>();
     }
 
@@ -22,5 +22,9 @@ public enum DiverManager {
 
     public Driver getDriver(String name) {
         return driversMap.get(name);
+    }
+
+    public Map<String, Driver> getDriversMap() {
+        return driversMap;
     }
 }
