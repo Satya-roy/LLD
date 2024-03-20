@@ -6,6 +6,22 @@ import model.vehicle.Vehicle;
 import java.util.Map;
 
 public class ParkingSpotManager {
+
+    private volatile ParkingSpotManager parkingSpotManager;
+
+    private ParkingSpotManager() {};
+
+    public ParkingSpotManager getParkingSpotManager() {
+        if(parkingSpotManager == null) {
+            synchronized (ParkingSpotManager.class) {
+                if(parkingSpotManager == null) {
+                    parkingSpotManager = new ParkingSpotManager();
+                }
+            }
+        }
+        return parkingSpotManager;
+    }
+
     //parking spot id -> true or false
     Map<ParkingSpot, Boolean> listOfParkingSpot;
 
